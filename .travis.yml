@@ -12,3 +12,6 @@ deploy:
   github_token: $git_hub_token
   on:
     branch: master
+  local_dir: docs
+  target-branch: gh-pages
+  verbose: true
