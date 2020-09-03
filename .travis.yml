@@ -7,8 +7,9 @@ script: npm run generate
 
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: true
   local_dir: docs
+  strategy: git
   github_token: $GITHUB_TOKEN
   on:
     branch: master
