@@ -13,7 +13,7 @@ script:
     # Use reveal-md to generate PDF.
     - reveal-md slides.md --disable-auto-open --theme white --print slides.pdf
     - cp slides.pdf docs/.
-    
+    - yarn build
     npm run generate
 
 deploy:
