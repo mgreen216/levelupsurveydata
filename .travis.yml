@@ -10,6 +10,6 @@ deploy:
   cleanup: true
   local_dir: docs
   strategy: git
-  github_token: $GITHUB_TOKEN
+  github_token: $git_hub_token
   on:
     branch: master
