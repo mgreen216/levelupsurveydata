@@ -7,6 +7,9 @@ script:
     - yarn build
     npm run generate
 
+before_deploy:
+    - cd $TRAVIS_BUILD_DIR
+
 deploy:
   provider: pages
   cleanup: true
