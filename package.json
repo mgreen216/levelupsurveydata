@@ -11,7 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/mgreen216/levelupsurveydata.git"
   },
-  "author": "Martin Murphy",
+  "author": "Mark Green",
+  "credit" : "Martin Murphy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mgreen216/levelupsurveydata/issues"
