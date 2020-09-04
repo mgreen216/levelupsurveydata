@@ -4,3 +4,10 @@ These days, data is all around us – and each day more data is created than we 
 
 - Participants will understand the process of building a visualization in Tableau
 - Participants will be able to apply the foundations of effective dashboards to their own institution’s survey dataset
+
+## Getting Started
+
+- Download Tableau (https://www.tableau.com/products/desktop/download)
+- Access the presentation (https://mgreen216.github.io/levelupsurveydata/#/)
+
+This offering was presented at the 2020 Drexel Assessment conference (https://drexel.edu/aconf). 
