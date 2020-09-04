@@ -10,4 +10,4 @@ These days, data is all around us – and each day more data is created than we 
 - Download Tableau (https://www.tableau.com/products/desktop/download)
 - Access the presentation (https://mgreen216.github.io/levelupsurveydata/#/)
 
-This offering was presented at the 2020 Drexel Assessment conference 🐉💻 https://drexel.edu/aconf) on September 9, 2020. 
+This offering was presented at the 2020 Drexel Assessment conference 🐉💻 (https://drexel.edu/aconf) on September 9, 2020. 
