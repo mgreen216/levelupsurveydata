@@ -11,8 +11,8 @@ deploy:
   provider: pages
   cleanup: true
   strategy: git
-  github_token: $git_hub_token
+  token: $git_hub_token
   on:
     branch: master
-    target-branch: gh-pages
+    target_branch: gh-pages
     verbose: true
