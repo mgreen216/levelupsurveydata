@@ -18,7 +18,11 @@ revealOptions:
 ## Introduction
 
 * Data is everywhere! 
+
+![Alt Text](https://media.giphy.com/media/VeNDat4n4Kre76oS1g/giphy.gif)
 * Let's get lazy! 
+
+![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
 
 <!--s-->
 
@@ -32,7 +36,7 @@ revealOptions:
 ## Time to Get Started
 
 * Download Tableau (https://www.tableau.com/products/desktop/download)
-* Download Datafile (NEED GITHUB ADDRESS)
+* Download Datafile (https://github.com/mgreen216/levelupsurveydata/blob/master/Fake%20Survey%20Data%20-%20Leveling-Up.csv)
 
 <!--s-->
 
