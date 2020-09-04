@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau</title>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+## Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
+
+### Mark Green
+#### Holy Family University
+#### Director of Institutional Research
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Introduction
+
+* Data is everywhere! 
+* Let's get lazy! 
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Learning Outcomes
+
+* Understand the process of building a visualizaiton in Tableau
+* Apply the foundations to apply this on your own
+
+## Time to Get Started
+
+* Download Tableau (https://www.tableau.com/products/desktop/download)
+* Download Datafile (NEED GITHUB ADDRESS)
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+## Data Structures
+
+### Wide vs. Tall Data Files
+* Each row is a respondent
+* Each row is a question response
+
+</script></section><section data-markdown><script type="text/template">
+
+# Wide Data
+
+
+</script></section><section data-markdown><script type="text/template">
+
+# Tall Data
+
+</script></section></section><section  data-markdown><script type="text/template">
+
+## Preparing your Data
+
+* Data Source
+* Data Cleaning
+* Data Visualization
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Next Steps
+
+* Open Tableau
+* Connect the Data Source
+* Explore the data
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+## Tableau Terminology
+
+* Measures
+* Dimensions
+* Columns 
+* Rows 
+
+</script></section><section data-markdown><script type="text/template">
+
+### Tableau Terminology (Cont'd)
+
+* Colors
+* Size 
+* Tooltip
+* Label
+* Detail
+* Shape
+
+</script></section></section><section  data-markdown><script type="text/template">
+
+## Build a Bar Chart
+
+* Question to Columns
+* SUM(Response Value) to Rows
+* Question to Color
+* Move SUM(Response Value) to Label
+* Move AVG(Response Value) to Label -> Change format to percent
+* Filter Question
+
+```
+Select Grad School Full-Time, Grad School Part-Time,
+Work Full-Time, Work Part-Time
+```
+</script></section><section  data-markdown><script type="text/template">
+
+## Build a Dashboard
+
+* Create a chart for race
+* Create a chart for gender
+* Create a chart for major
+* Create a dashboard and bring in the charts
+* Add a filter
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+## Questions by Program
+
+* Filter Questions
+* Move Majors to Rows
+* Move Question to Columns
+* Move AVG(Response Value) to Columns
+* Move CNTD(Student Id) to size
+
+</script></section><section data-markdown><script type="text/template">
+
+### Questions by Program (Cont'd)
+
+* Move AVG(Response Value) to Label
+* Add Analytics Average Line
+* Fixed Question Average
+```
+{FIXED [Question] : AVG([Response Value])}
+```
+</script></section><section data-markdown><script type="text/template">
+
+### Z-Score
+```
+(AVG([Response Value]) - SUM([Fixed Question Average]))
+/
+WINDOW_STDEV(avg([Response Value]))
+```
+
+</script></section><section data-markdown><script type="text/template">
+
+### Stat Diff
+```
+IF [Z-Score] >= 2.33 THEN 'Statistically greater p-value < .01'
+ELSEIF [Z-Score] >= 1.645 THEN 'Statistically greater p-value < .05' 
+ELSEIF [Z-Score] <= -2.33 THEN 'Statistically less p-value < .01'
+ELSEIF [Z-Score] <= -1.645 THEN 'Statistically less p-value < .05' 
+ELSE 'No statistical difference'
+END
+```
+
+Change Stat Diff to be calculated Across Major
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+## Stacked Likert Scale Data
+
+* Question to Rows
+* Filter Questions
+
+</script></section><section data-markdown><script type="text/template">
+
+### Total Negative
+```
+TOTAL(SUM(IF [Response Value] = 1 THEN 1 
+ELSEIF [Response Value] = 2 THEN 1
+ELSEIF [Response Value] = 3 THEN 0.5
+ELSE 0
+END))
+```
+</script></section><section data-markdown><script type="text/template">
+
+### Respondents
+
+```
+TOTAL(COUNTD([Student Id]))
+```
+
+### Start
+
+```
+-[Total Negative]/[Respondents]
+```
+
+</script></section><section data-markdown><script type="text/template">
+
+### Percent of Total
+
+```	
+COUNTD([Student Id])/[Respondents]
+```
+### Gantt Position
+
+```
+PREVIOUS_VALUE([Start]) + ZN(LOOKUP([Percent of Total],-1))
+```
+
+</script></section><section data-markdown><script type="text/template">
+
+* Move Gantt Position to Columns
+* Move AVG(Response Value) to Columns
+* Move Start to Rows (Change to discreet; Change to compute using Question)
+* Move Question to Rows 
+* Move Respondents to Rows
+
+</script></section><section data-markdown><script type="text/template">
+
+* Question Response to Color
+* Percent of Total to Size (Compute Using Question Response)
+* Percent of Total to Label (Compute Using Question Reponse)
+* Gantt Position Compute Using Question Response
+
+</script></section><section data-markdown><script type="text/template">
+
+* Add AVG(Response Value)  to Columns
+* Create Dual Axis
+* Format Text for Response Value
+
+</script></section></section><section  data-markdown><script type="text/template">
+
+# Questions? 
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Thank you! 
+
+* Mark Green
+* email: mgreen2@holyfamily.edu 
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"fade"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
