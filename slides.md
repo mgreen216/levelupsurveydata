@@ -2,9 +2,9 @@
 title: Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
 separator: <!--s-->
 verticalSeparator: <!--v-->
-theme: solarized
+theme: sky
 revealOptions:
-    transition: 'fade'
+    transition: 'slide'
 ---
 
 ## Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
@@ -26,6 +26,8 @@ revealOptions:
 
 * Understand the process of building a visualizaiton in Tableau
 * Apply the foundations to apply this on your own
+
+<!--s-->
 
 ## Time to Get Started
 
