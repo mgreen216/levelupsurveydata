@@ -12,6 +12,7 @@ deploy:
   cleanup: true
   strategy: git
   token: $git_hub_token
+  local_dir: docs
   on:
     branch: master
     target_branch: gh-pages
