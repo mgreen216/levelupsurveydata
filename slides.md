@@ -15,19 +15,7 @@ revealOptions:
 
 <!--s-->
 
-![Alt Text](https://www.azquotes.com/picture-quotes/quote-welcome-to-the-information-age-data-data-everywhere-but-no-one-knows-a-thing-roger-kimball-68-77-62.jpg)
-
-<!--s-->
-
-
-![Alt Text](http://thequotes.in/wp-content/uploads/2016/05/Bill-Gates-Quotes-9.jpg)
-
-<!--s-->
-
-![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
-via Giphy
-
-* Let's get lazy! 
+## Introduction
 
 <!--s-->
 
@@ -35,6 +23,22 @@ via Giphy
 
 * Understand the process of building a visualizaiton in Tableau
 * Apply the foundations to apply this on your own
+
+<!--s-->
+
+![Alt Text](https://www.azquotes.com/picture-quotes/quote-welcome-to-the-information-age-data-data-everywhere-but-no-one-knows-a-thing-roger-kimball-68-77-62.jpg)
+
+<!--s-->
+
+![Alt Text](http://thequotes.in/wp-content/uploads/2016/05/Bill-Gates-Quotes-9.jpg)
+
+<!--s-->
+
+## Time to get lazy! 
+
+![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
+
+via Giphy
 
 <!--s-->
 
@@ -75,9 +79,6 @@ via Giphy
 * Data Source
 * Data Cleaning
 * Data Visualization
-
-<!--s-->
-
 
 <!--s-->
 
