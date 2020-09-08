@@ -34,7 +34,7 @@ revealOptions:
 
 <!--s-->
 
-## Time to get lazy! 
+## Let's get lazy! 
 
 ![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
 
