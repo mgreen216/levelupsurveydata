@@ -7,11 +7,11 @@ revealOptions:
     transition: 'slide'
 ---
 
-## Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
+### Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
 
-### Mark Green
-#### Holy Family University
-#### Director of Institutional Research
+#### Mark Green
+##### Holy Family University
+##### Director of Institutional Research
 
 <!--s-->
 
@@ -38,14 +38,16 @@ revealOptions:
 
 ![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
 
-via Giphy
+**via Giphy**
 
 <!--s-->
 
 ## Time to Get Started
 
-* Download Tableau (https://www.tableau.com/products/desktop/download)
-* Download Datafile (https://github.com/mgreen216/levelupsurveydata/blob/master/Fake%20Survey%20Data%20-%20Leveling-Up.csv)
+* Download Tableau 
+(https://www.tableau.com/products/desktop/download)
+* Download Datafile 
+(https://github.com/mgreen216/levelupsurveydata/blob/master/Fake%20Survey%20Data%20-%20Leveling-Up.csv)
 
 <!--s-->
 
@@ -56,18 +58,21 @@ via Giphy
 * Each row is a question response
 
 ![Alt Text](https://i1.wp.com/cmdlinetips.com/wp-content/uploads/2019/06/tidy_data.png)
+
+<!--v-->
+
 ![Alt Text](https://errickson.net/stata1/images/wide-vs-long.png)
 
 <!--v-->
 
-# Wide Data
+## Wide Data
 
 * A responses' responses will be in a single row
 * Each question in a seperate column
 
 <!--v-->
 
-# Long Data
+## Long Data
 
 * Each row is one point per respondent
 * Each responden will have data in multiple rows
@@ -82,9 +87,9 @@ via Giphy
 
 <!--s-->
 
-# Wide-to-Long 
+## Wide-to-Long 
 
-## SPSS
+### SPSS
 
 ```
 VARSTOCASES 
@@ -92,6 +97,8 @@ VARSTOCASES
   /INDEX=Question_Response(Question) 
   /KEEP=Student_Id Name Race Location Gender Major.
 ```
+<!--v-->
+
 ## Next Steps
 
 * Open Tableau
