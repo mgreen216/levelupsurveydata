@@ -6,7 +6,7 @@
 
     <title>Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau</title>
     <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./dist/theme/sky.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
 
   </head>
@@ -14,18 +14,15 @@
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template">
 
-## Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
+### Leveling-up your Survey Data - A hands-on approach to visualizing survey data with Tableau
 
-### Mark Green
-#### Holy Family University
-#### Director of Institutional Research
+#### Mark Green
+##### Holy Family University
+##### Director of Institutional Research
 
 </script></section><section  data-markdown><script type="text/template">
 
 ## Introduction
-
-* Data is everywhere! 
-* Let's get lazy! 
 
 </script></section><section  data-markdown><script type="text/template">
 
@@ -34,27 +31,58 @@
 * Understand the process of building a visualizaiton in Tableau
 * Apply the foundations to apply this on your own
 
+</script></section><section  data-markdown><script type="text/template">
+
+![Alt Text](https://www.azquotes.com/picture-quotes/quote-welcome-to-the-information-age-data-data-everywhere-but-no-one-knows-a-thing-roger-kimball-68-77-62.jpg)
+
+</script></section><section  data-markdown><script type="text/template">
+
+![Alt Text](http://thequotes.in/wp-content/uploads/2016/05/Bill-Gates-Quotes-9.jpg)
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Let's get lazy! 
+
+![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
+
+**via Giphy**
+
+</script></section><section  data-markdown><script type="text/template">
+
 ## Time to Get Started
 
-* Download Tableau (https://www.tableau.com/products/desktop/download)
-* Download Datafile (NEED GITHUB ADDRESS)
+* Download Tableau 
+(https://www.tableau.com/products/desktop/download)
+* Download Datafile 
+(https://github.com/mgreen216/levelupsurveydata/blob/master/Fake%20Survey%20Data%20-%20Leveling-Up.csv)
 
 </script></section><section ><section data-markdown><script type="text/template">
 
 ## Data Structures
 
-### Wide vs. Tall Data Files
+### Wide vs. Long Data Files
 * Each row is a respondent
 * Each row is a question response
 
-</script></section><section data-markdown><script type="text/template">
-
-# Wide Data
-
+![Alt Text](https://i1.wp.com/cmdlinetips.com/wp-content/uploads/2019/06/tidy_data.png)
 
 </script></section><section data-markdown><script type="text/template">
 
-# Tall Data
+![Alt Text](https://errickson.net/stata1/images/wide-vs-long.png)
+
+</script></section><section data-markdown><script type="text/template">
+
+## Wide Data
+
+* A responses' responses will be in a single row
+* Each question in a seperate column
+
+</script></section><section data-markdown><script type="text/template">
+
+## Long Data
+
+* Each row is one point per respondent
+* Each responden will have data in multiple rows
 
 </script></section></section><section  data-markdown><script type="text/template">
 
@@ -64,7 +92,19 @@
 * Data Cleaning
 * Data Visualization
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section ><section data-markdown><script type="text/template">
+
+## Wide-to-Long 
+
+### SPSS
+
+```
+VARSTOCASES 
+  /MAKE Question_Response FROM satis_civic_engage satis_campus_safe satis_social_life satis_health_services satis_res_hall satis_ath_rec_fac wft wpt gradft gradpt
+  /INDEX=Question_Response(Question) 
+  /KEEP=Student_Id Name Race Location Gender Major.
+```
+</script></section><section data-markdown><script type="text/template">
 
 ## Next Steps
 
@@ -72,7 +112,7 @@
 * Connect the Data Source
 * Explore the data
 
-</script></section><section ><section data-markdown><script type="text/template">
+</script></section></section><section ><section data-markdown><script type="text/template">
 
 ## Tableau Terminology
 
@@ -278,7 +318,7 @@ PREVIOUS_VALUE([Start]) + ZN(LOOKUP([Percent of Total],-1))
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"transition":"fade"}, queryOptions);
+      var options = extend(defaultOptions, {"transition":"slide"}, queryOptions);
     </script>
 
 
