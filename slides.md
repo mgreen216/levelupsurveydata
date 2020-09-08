@@ -15,14 +15,19 @@ revealOptions:
 
 <!--s-->
 
-## Introduction
+![Alt Text](https://www.azquotes.com/picture-quotes/quote-welcome-to-the-information-age-data-data-everywhere-but-no-one-knows-a-thing-roger-kimball-68-77-62.jpg)
 
-* Data is everywhere! 
+<!--s-->
 
-![Alt Text](https://media.giphy.com/media/VeNDat4n4Kre76oS1g/giphy.gif)
-* Let's get lazy! 
+
+![Alt Text](http://thequotes.in/wp-content/uploads/2016/05/Bill-Gates-Quotes-9.jpg)
+
+<!--s-->
 
 ![Alt Text](https://media.giphy.com/media/UwjE7m3HGBnby/giphy.gif)
+via Giphy
+
+* Let's get lazy! 
 
 <!--s-->
 
@@ -42,18 +47,26 @@ revealOptions:
 
 ## Data Structures
 
-### Wide vs. Tall Data Files
+### Wide vs. Long Data Files
 * Each row is a respondent
 * Each row is a question response
+
+![Alt Text](https://i1.wp.com/cmdlinetips.com/wp-content/uploads/2019/06/tidy_data.png)
+![Alt Text](https://errickson.net/stata1/images/wide-vs-long.png)
 
 <!--v-->
 
 # Wide Data
 
+* A responses' responses will be in a single row
+* Each question in a seperate column
 
 <!--v-->
 
-# Tall Data
+# Long Data
+
+* Each row is one point per respondent
+* Each responden will have data in multiple rows
 
 <!--s-->
 
@@ -65,6 +78,19 @@ revealOptions:
 
 <!--s-->
 
+
+<!--s-->
+
+# Wide-to-Long 
+
+## SPSS
+
+```
+VARSTOCASES 
+  /MAKE Question_Response FROM satis_civic_engage satis_campus_safe satis_social_life satis_health_services satis_res_hall satis_ath_rec_fac wft wpt gradft gradpt
+  /INDEX=Question_Response(Question) 
+  /KEEP=Student_Id Name Race Location Gender Major.
+```
 ## Next Steps
 
 * Open Tableau
